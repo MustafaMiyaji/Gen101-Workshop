@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Red Pandas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f3e9;
+            color: #4a2c2a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #b33f3f;
+            margin-bottom: 20px;
+        }
+        .facts-container {
+            max-width: 600px;
+            width: 90%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .fact {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .fact:last-child {
+            border-bottom: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            .facts-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts About Red Pandas</h1>
+    <div class="facts-container" id="factsContainer"></div>
+
+    <script>
+        const facts = [
+            { "fact": "Red pandas are not closely related to giant pandas." },
+            { "fact": "They are native to the eastern Himalayas and southwestern China." },
+            { "fact": "Red pandas are also known as 'firefoxes'." },
+            { "fact": "They have a false thumb, which is an extended wrist bone, to help them grasp bamboo." },
+            { "fact": "Red pandas are excellent climbers and spend most of their time in trees." },
+            { "fact": "Their diet is mainly bamboo, but they also eat eggs, birds, and insects." },
+            { "fact": "Red pandas are crepuscular, meaning they are most active during dawn and dusk." },
+            { "fact": "They have a bushy tail that helps them balance and keep warm in the cold." },
+            { "fact": "Red pandas communicate using body language and a variety of sounds, including squeals and twitters." },
+            { "fact": "They are considered endangered due to habitat loss and poaching." }
+        ];
+
+        const factsContainer = document.getElementById('factsContainer');
+
+        facts.forEach(item => {
+            const factElement = document.createElement('div');
+            factElement.className = 'fact';
+            factElement.textContent = item.fact;
+            factsContainer.appendChild(factElement);
+        });
+    </script>
+</body>
+</html>
